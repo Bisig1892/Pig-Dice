@@ -107,6 +107,20 @@ function holdDie():void{
     //reset the turn total to 0
     let turnTotal = 0;
     (<HTMLInputElement>document.getElementById('total')).value = turnTotal.toString();
+    winner();
     //change players
     changePlayers();
+}
+
+function winner() {
+    let score1 = parseInt((<HTMLInputElement>document.getElementById('score1')).value);
+    let score2 = parseInt((<HTMLInputElement>document.getElementById('score2')).value);
+    let currPlayerName = document.getElementById('current').innerText;
+
+    if(score1 >= 100) {
+        alert(currPlayerName + ' is the winner!');
+    }
+    if(score2 >= 100) {
+        alert(currPlayerName + ' is the winner!');
+    }
 }

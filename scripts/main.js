@@ -97,6 +97,18 @@ function holdDie() {
     //reset the turn total to 0
     var turnTotal = 0;
     document.getElementById('total').value = turnTotal.toString();
+    winner();
     //change players
     changePlayers();
+}
+function winner() {
+    var score1 = parseInt(document.getElementById('score1').value);
+    var score2 = parseInt(document.getElementById('score2').value);
+    var currPlayerName = document.getElementById('current').innerText;
+    if (score1 >= 100) {
+        alert(currPlayerName + ' is the winner!');
+    }
+    if (score2 >= 100) {
+        alert(currPlayerName + ' is the winner!');
+    }
 }
